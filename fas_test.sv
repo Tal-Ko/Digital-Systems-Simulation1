@@ -23,14 +23,57 @@ module fas_test;
 		a_ns = 1'b0;
 
 		// Wait for maximum Tpd in order for the system to stablize
-		#50
+		#100
+		a = 1'b1;
 
-		// b 0->1
+		#100
+		a = 1'b0;
 		b = 1'b1;
+
+		#100
+		a = 1'b1;
+
+		#100
+		a = 1'b0;
+		b = 1'b0;
+		cin = 1'b1;
+
+		#100
+		a = 1'b1;
+
+		#100
+		b = 1'b1;
+
+		#100;
+		a = 1'b0;
+		b = 1'b0;
+		cin = 1'b0;
+		a_ns = 1'b1;
+
+		#100
+		a = 1'b1;
+
+		#100
+		a = 1'b0;
+		b = 1'b1;
+
+		#100
+		a = 1'b1;
+
+		#100
+		a = 1'b0;
+		b = 1'b0;
+		cin = 1'b1;
+
+		#100
+		a = 1'b1;
+
+		#100
+		b = 1'b1;
+
 		#100
 
-		// TODO: Write the rest of the test cases
-
+		// Total simulation time: 1500
 		$stop;
 	end
 
